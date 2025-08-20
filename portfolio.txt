@@ -1,0 +1,50 @@
+Introduction
+ Name: Sandeep Gupta
+ Title: AI/ML Engineer
+ About: Final year B.Tech Computer Science student with hands-on experience in AI/ML, passionate about building intelligent applications and solving real-world problems using data-driven solutions.
+
+Experience:
+ Role: AI/ML Intern at bluCursor Infotech Pvt. Ltd. (May 2024 – August 2024, 4 Months)
+   - Undergoing training in Neural Network techniques and data filtering as part of an AI development internship
+   - Gaining hands-on experience with Python libraries including NumPy, Pandas, and Matplotlib for data analysis and visualization
+   - Performed data cleaning, preprocessing, and feature engineering using Python libraries such as Pandas, NumPy, and Scikit-learn
+   - Collaborated with a team to present findings, visualize insights, and suggest improvements for future iterations.
+
+Skills:
+ Languages: Python, C++, SQL, C, HTML, CSS
+ Ml_frameworks: TensorFlow, Keras, PyTorch, Scikit-Learn, numpy, Pandas, Matplotlib, OpenCV
+ Tools: OpenCV, Flask, Streamlit, Power BI, Git/GitHub
+ Concepts: Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Data Visualization
+
+Soft Skills: Problem Solving, Team Collaboration, Adaptability, Critical Thinking, Effective Communication
+
+Certifications:
+ Introduction to Machine Learning  - Kaggle  ( January 2025)
+ Git & Github - Geekster ( August 2024)
+ Basic of Python - Infosys Springboard (June 2023)
+
+Education:
+ B.Tech in Computer Science - Shivajirao Kadam institute of Technology and Management, Indore (2022 – 2026) [CGPA: 7.38]
+ Senior Secondary (XII) - St.Mary Senior Secondary School, Barwani (2022) [79.80%]
+ Secondary (X) - St.Augustine English Medium School, Pansemal (2020) [92.66%]
+
+Projects:
+ Face Recognition Attendance System: Developed a face recognition-based attendance system using OpenCV and Python. Automated student attendance marking with real-time camera feed.
+   Tech: Python, OpenCV, Face Recognition, Tkinter
+   GitHub: https://github.com/sandeep-face-recognition
+ MediCare.AI: An AI-powered healthcare assistant that predicts diseases based on symptoms and recommends precautions.
+   Tech: Python, Machine Learning, Flask, Scikit-Learn
+   GitHub: https://github.com/sandeep-medicare-ai
+ Object Detection Web App: Implemented YOLO model for object detection integrated with a Streamlit web app.
+   Tech: Python, YOLO, Streamlit
+   GitHub: https://github.com/sandeep-object-detection
+ Language Hub: A multilingual web app for text-to-speech and speech-to-text translation using Flask.
+   Tech: Python, Flask, Google TTS/STT APIs
+   GitHub: https://github.com/sandeep-language-hub
+
+Contact:
+ Email: sandeepgupta7224@gmail.com
+ Phone: +91-7224057957
+ Linkedin: https://www.linkedin.com/in/sandeep-gupta-b74956294/
+ Github: https://github.com/sandeep7224
+ Portfolio: https://sandeep-portfolio-2kuf.onrender.com

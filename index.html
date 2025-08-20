@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Chatbot</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f4f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .chat-container {
+      width: 420px;
+      height: 600px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: #4a90e2;
+      color: white;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin: 8px 0;
+      padding: 12px;
+      border-radius: 12px;
+      max-width: 75%;
+      word-wrap: break-word;
+    }
+
+    .user-message {
+      background: #4a90e2;
+      color: white;
+      margin-left: auto;
+    }
+
+    .bot-message {
+      background: #e5e7eb;
+      color: #111;
+      margin-right: auto;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 14px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .chat-input button {
+      background: #4a90e2;
+      border: none;
+      color: white;
+      padding: 0 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .chat-input button:hover {
+      background: #357ab8;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">💬 Portfolio Chatbot</div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Ask me about my portfolio..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    async function sendMessage() {
+      const input = document.getElementById("userInput");
+      const message = input.value.trim();
+      if (!message) return;
+
+      // Show user message
+      addMessage(message, "user-message");
+      input.value = "";
+
+      // Call backend API
+      const response = await fetch("http://127.0.0.1:5000/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: message })
+      });
+
+      const data = await response.json();
+      addMessage(data.answer, "bot-message");
+    }
+
+    function addMessage(text, className) {
+      const chatMessages = document.getElementById("chatMessages");
+      const messageDiv = document.createElement("div");
+      messageDiv.className = `message ${className}`;
+      messageDiv.textContent = text;
+      chatMessages.appendChild(messageDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+  </script>
+</body>
+</html>
