@@ -4,8 +4,8 @@ import json
 import os
 
 # Load env variables
-PINECONE_API_KEY = "pcsk_3Qr8TR_BwL2C9RE4skDwkWmMkKz4QJ8FW6FTjb14vba9Jvi7b6YhBKyKHqvX2tuUvhsMtG"
-GOOGLE_API_KEY = "AIzaSyCUgS5kvYhNIRs2ExfXfifdBK7fpWSzDOc"
+PINECONE_API_KEY = ""
+GOOGLE_API_KEY = ""
 
 # Configure Gemini
 genai.configure(api_key=GOOGLE_API_KEY)
@@ -51,6 +51,7 @@ for chunk in chunks:
 index.upsert(vectors=vectors)
 
 print("✅ Portfolio data stored in Pinecone successfully!")
+
 
 
 
